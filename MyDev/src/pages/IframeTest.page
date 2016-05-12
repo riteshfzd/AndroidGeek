@@ -1,0 +1,4 @@
+<apex:page sidebar="false">
+  <iframe src="https://insightdev1.fusionopscloud.com/ispring/awc?mode=page&processID=99AF5417_4BC4_40A6_9115_BC81CC2455C9&app=salesforce"
+height="400px" width="100%" style="border:0;" id="fusionops" />
+</apex:page>

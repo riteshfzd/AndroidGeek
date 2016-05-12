@@ -1,0 +1,53 @@
+<apex:page >
+<!--<script type="text/javascript" src="/resource/jQuery"></script> -->
+<apex:includeScript value="{!$Resource.jQuery}"/>
+<script type="text/javascript">
+var j$ = jQuery.noConflict();
+j$(document).ready(function() {
+
+alert('Test');
+
+
+
+ alert('location:: '+window.location.href);
+
+var objectPefix = window.location.href.substring( window.location.href.indexOf('.com/') + 5, window.location.href.indexOf('.com/') + 8 );
+
+ 
+      // if(objectPefix=='00T'){
+       alert('Test1');
+            j$('.labelCol').each(function () {
+                alert('test12345');
+                if (j$(this).text() == 'Name'){
+                alert('Test2');
+                        j$(this).hide();
+                }
+            });
+      //  }
+      
+      
+    
+      
+      var delay=3000; //1 seconds
+
+setTimeout(function(){
+     /* var abc=document.getElementById('tsk5_ilecell');
+      alert('abc:: '+abc);
+      
+      abc.style.display = "none";*/
+      
+      j$( '.labelCol' ).each(function() {
+alert('Test4');
+  console.log( "checking:::: " + j$( this ).text() );
+})
+      
+}, delay); 
+      
+      
+      
+  
+      
+      
+})
+</script>
+</apex:page>

@@ -1,0 +1,20 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+  
+  
+  <script type="text/javascript">
+        
+        window.onbeforeunload = function() {
+            return "Are you sure to refsresh the page it may cause data loss";
+        }
+        
+        window.onload = function () {
+        document.onkeydown = function (e) {
+            return (e.which || e.keyCode) != 116;
+        };
+    }
+  </script>
+</apex:page>

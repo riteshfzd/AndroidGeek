@@ -1,0 +1,14 @@
+<apex:page standardController="case" >
+  <apex:emailPublisher entityId="{!case.id}" 
+         width="100%" ccVisibility="editable" emailBodyHeight="27em"
+         emailBodyFormat="textAndHTML" 
+         showAdditionalFields="true" enableQuickText="true"
+         toAddresses=""
+         toVisibility="editable"
+         bccVisibility="editable"                  
+         fromAddresses="riteshfzd@yahoo.co.in" 
+         subject=""
+         onSubmitSuccess=""
+         expandableHeader="false"
+         verticalResize="true"/>  
+</apex:page>

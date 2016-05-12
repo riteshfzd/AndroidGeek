@@ -1,0 +1,42 @@
+<apex:page standardController="Case">
+
+    <A HREF="#" onClick="testIsInConsole();return false">
+         Click here to check if the page is in the Service Cloud console</A> 
+     <apex:includeScript value="/soap/ajax/26.0/connection.js"/>  
+<apex:includeScript value="/support/console/26.0/integration.js"/>
+
+    <script type="text/javascript">
+        function testIsInConsole() {
+        alert("inside javascript");
+            if (sforce.console.isInConsole()) {
+                  alert('in console');
+               } else {
+                  alert('not in console');
+            }
+        }
+    </script>
+    
+    
+    <apex:sectionHeader title="Client Edit" />
+
+ 
+
+Please remember to submit any changes for processing<br/>
+
+after saving... And remember to relate needed Contacts<br/>
+and Contact Types to this Client...<br/><br/>
+
+<apex:pageMessages />
+
+<apex:form >
+
+<apex:pageBlock title="New Client">
+
+   <apex:pageBlockButtons >
+
+      <apex:commandButton value="Save"  oncomplete="testIsInConsole();" />
+      </apex:pageblockbuttons>
+      </apex:pageblock>
+      </apex:form>
+
+</apex:page>
