@@ -1,0 +1,191 @@
+<!--*********************************************************************************
+* Page : ViewCaseInlineEdit (VF Page)
+* CreatedBy: Ajay Aghnihotri 3 Dec 2013
+* LastModifiedBy: Neha Jain
+* LastModifiedOn: 25th Feb 2014
+* CalledFrom: Overridden View button in Case
+* Description: For inline Edit in Case
+* ---------------------------------------
+* Revision History
+* 28-Jan-14 Change done by Parag Sharma for Secure Central link is not working
+* 07 July 2014 - Implemented solution to redirect Reassign link to Reassign VF page in IE8(Upendra Kumar) 
+* 26 Aug 2014 - Changed LR POP Message(Ramesh Koppula)
+* 26 Aug 2014- Commented Logic for Case status Closed when click on Click here hyperlink (Ramesh Koppula)
+* 25 Feb 2015 - Added code for navigation wrt Partner Community. (Neha Jain)
+* 27 April 2015 - Merged communities code from QA env. (Neha Jain)
+***********************************************************************************-->
+    
+<apex:page id="thePage" standardController="Case"  title="{!Case.CaseNumber}" extensions="LRPopup" standardStylesheets="true">    
+    
+    <p style="color:red;"><b>Legal Notice:</b> Caution -Information retained or processed by this system has been designated NO LICENSE REQUIRED (NLR), pursuant to DoC Export Control Classification Number (ECCN) 9E991. Accordingly, the system may only contain the minimum technology necessary for the installation, operation, maintenance and repair of selected commercially certified engines eligible for treatment under ECCN 9A991. Users are expressly prohibited from entering development or production technology into this system. Likewise, users must not report data for engines controlled by the United States Munitions List, requiring an export authorization pursuant to 22 CFR Part 120 - 130.</p>
+    <!--<support:caseFeed id="CaseFeed" caseId="{!Case.Id}"/>-->
+    <apex:form id="theForm">
+         <!-- Define the JavaScript function sayHello-->
+        
+        <div onmouseover="addMouseOver(this, null, 'left')" onfocus="addMouseOver(this, null, 'left')" class="mouseOverInfoOuter">
+            <img title="" class="infoIcon" alt="" src="/s.gif" style="display: none;"/>
+            <div style="display: none; opacity: -0.19999999999999996;" class="mouseOverInfo">Click the lookup icon to select a value.<br/>Controls values for Contact Name
+            </div>
+        </div>
+        <!--div id="msgdiv" style="display: none;"-->
+        <apex:outputPanel id="op">
+            <div id="msgdiv" style="float:left;">
+               <!-- Please &nbsp;<apex:commandLink action="{!closeCase}" value="Click" oncomplete="finlredirect();" reRender=""/> Here to Close the LR Case.
+            </div>
+            <div id="iframediv">-->
+            
+                <!--&nbsp;Please use &nbsp; <apex:commandLink action="{!createLink}" value="Secured Support Central" onclick="LRredirect();" reRender="theForm"/> &nbsp; to store LR data.-->
+                License Required data is not permitted. Please use &nbsp; <apex:commandLink value="Secured Support Central" onclick="LRredirect();" reRender="abc"/> &nbsp;to store any LR data and take action to remove any LR material and from Salesforce then report any escapes.<br/>
+            </div><br/>
+            
+        </apex:outputPanel>
+        <!--/div-->
+    <!--Display the standard detail page of the case object w/o related lists-->
+        
+       
+       <apex:detail id="out" title="true" subject="{!case.Id}" relatedList="true" relatedListHover="true" inlineEdit="false" reRender="theForm" oncomplete="finlredirect()">
+       </apex:detail>
+    </apex:form>
+
+    <script src="../../support/console/29.0/integration.js" type="text/javascript"></script>
+    <script src="../resource/jQueryForPopup/jQuery/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../resource/jQueryForPopup/jQuery/ui/jquery-ui-1.9.1.custom.min.js" type="text/javascript"></script>
+    <script src="../resource/jQueryForPopup/jQuery/postmessage/jquery.ba-postmessage.js" type="text/javascript"></script>
+    <script src="../resource/jQueryForPopup/jQuery/bbq/jquery.ba-bbq.min.js" type="text/javascript"></script>
+    <script language="javascript">
+        
+
+        var qs = location.search; 
+        var checkIsInConsole = (qs.length !== 0 && ((qs.indexOf("?nonce=") > -1) || (qs.indexOf("&nonce=") > -1))) || (typeof(canvasClient)!='undefined' && canvasClient.isInConsole());
+        
+        var isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
+        // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+        var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        // At least Safari 3+: "[object HTMLElementConstructor]"
+        var isChrome = !!window.chrome;                          // Chrome 1+
+        var isIE = /*@cc_on!@*/false;                            // At least IE6
+
+        //alert('Test');
+        if(isIE){
+            //alert('Browser is IE8 ');
+            var actionLinks = document.querySelectorAll('.actionLink');
+            //alert('actionLinks.length'+actionLinks.length);
+            for (var i = 0; i < actionLinks.length; i++) {
+                if(actionLinks[i].firstChild.nodeValue.trim() == 'Reassign') {
+                    if(checkIsInConsole){
+                        actionLinks[i].href = '/apex/ReassignApproval'+qs;
+                    }else{
+                        //Added by Neha Jain for Partner Community on 25th Feb, 2015
+                        if ('{!$Site.Prefix}' == null || '{!$Site.Prefix}' == '' ) { 
+                            actionLinks[i].href = '/apex/ReassignApproval?id={!Case.Id }';
+                        }
+                        else{
+                            actionLinks[i].href = '{!$Site.Prefix}/apex/ReassignApproval?id={!Case.Id }';
+                        }
+                    }
+                   break;
+                }
+            }
+        }else{
+            var actionLinks = document.getElementsByClassName('actionLink');
+            //alert('actionLinks.length'+actionLinks.length);
+            for (var i = 0; i < actionLinks.length; i++) {
+                if(actionLinks[i].firstChild.nodeValue.trim() === 'Reassign') {
+                    if(checkIsInConsole){
+                        actionLinks[i].href = '/apex/ReassignApproval'+qs;
+                    }else{
+                        //Added by Neha Jain for Partner Community on 25th Feb, 2015
+                        if ('{!$Site.Prefix}' == null || '{!$Site.Prefix}' == '' ) { 
+                            actionLinks[i].href = '/apex/ReassignApproval?id={!Case.Id }';
+                        }
+                        else{
+                            actionLinks[i].href = '{!$Site.Prefix}/apex/ReassignApproval?id={!Case.Id }';
+                        }
+                    }
+                   break;
+                }
+            }       
+        }
+        sforce.console.setTabLink();
+        //if(sforce.console.isInConsole()) {
+           // sforce.console.setTabTitle('{!Case.CaseNumber}');
+        //}
+        var showBool = '{!showPopup}';
+        var link = '{!propfullFileURL}';
+        //alert('1 = '+ showBool + ' 2 = ' + link);
+        var LRredirectURL=link+'/apex/LRIframe';
+        var chkbx = '';
+        var newWin=null;
+        if(showBool=='true'){
+        //alert('______ViewCaseInlineEdit___');
+                var msg = confirm('This SR is now marked as LR Restricted, please remove any License Required data, and if necessary, use Secured Support Central (see link on top of page) to store any License Required data then put the SSC reference in the Case Information Reference field. To remove Solution details, please contact the SFDC admin support team.');
+                if(msg=='true'||msg==true){
+                    //var finalurl=link+ '/apex/LRIframe';
+                    var finalurl = '';
+                    //Added by Neha Jain for Partner Community on 25th Feb, 2015
+                    if ('{!$Site.Prefix}' == null || '{!$Site.Prefix}' == '' ) { 
+                        finalurl='/apex/LRIframe';
+                    }
+                    else{
+                        finalurl='{!$Site.Prefix}/apex/LRIframe';
+                    }    
+                    window.open(finalurl, '_newtab'); //Its Working
+                        //newWin.focus();
+            }
+        }
+        if(chkbx=='true' || chkbx==true) {
+         //alert('______iF'+chkbx);
+            var primaryTabName = 'myPrimaryTab';
+            sforce.console.refreshPrimaryTabByName(primaryTabName, true, refreshSuccess);
+            if(document.getElementById("iframediv")!=null && document.getElementById("iframediv")!='')
+                document.getElementById("iframediv").style.display="block";
+            if(document.getElementById("msgdiv")!=null && document.getElementById("msgdiv")!='')
+                document.getElementById("msgdiv").style.display="block";
+            //alert(link);
+          //  alert('true After');
+        } else{
+            //alert('______eLSE___'+chkbx);
+          //  alert('false');
+            if(document.getElementById("msgdiv")!=null && document.getElementById("msgdiv")!='')
+                document.getElementById("msgdiv").style.display="none";
+            if(document.getElementById("iframediv")!=null && document.getElementById("iframediv")!='')
+                document.getElementById("iframediv").style.display="none";
+        }
+       function finlredirect(){
+            if(sforce.console.isInConsole()) {
+                //alert('In Console');
+                var finlredirecturl='/{!cseId}';
+                //var primaryTabName = 'myPrimaryTab';
+                //sforce.console.refreshPrimaryTabByName(primaryTabName, true, refreshSuccess);
+                window.parent.location.open(finlredirecturl, '_self'); //Its Working
+            }else{
+                var finlredirecturl='/{!cseId}';
+                //Added by Neha Jain for Partner Community on 25th Feb, 2015
+                 if ('{!$Site.Prefix}' == null || '{!$Site.Prefix}' == '' ) { 
+                    finlredirecturl='/{!cseId}';
+                 }
+                 else{
+                     finlredirecturl='{!$Site.Prefix}/{!cseId}';
+                 }
+                 window.open(finlredirecturl, '_self'); //Its Working
+            }
+        }
+        var refreshSuccess = function refreshSuccess(result) {
+            if (result.success == true) {
+                //alert('Primary tab refreshed successfully');
+            } else {
+                //alert('Primary tab did not refresh');
+            }
+        }
+        function LRredirect(){
+            //alert(LRredirectURL);
+            //window.open(LRredirectURL);
+            newWin=window.open(LRredirectURL, 'Popup','height=450,width=650,left=100,top=100,resizable=no,toolbar=no,status=no');
+            if (window.focus){
+                newWin.focus();
+            }
+        }       
+    </script> 
+  
+</apex:page>

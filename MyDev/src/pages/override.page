@@ -1,0 +1,13 @@
+<apex:page standardController="Account" showHeader="true" wizard="false" readOnly="false" rendered="true" showChat="true" standardStylesheets="false"
+      tabStyle="account"  >
+
+  <apex:tabPanel > 
+                
+  <apex:tab label="Details" name="AccDetails" id="tabdetails" style="background-color: white;">
+         <apex:detail relatedList="false" title="true" inlineEdit="true"/>
+   
+      </apex:tab>
+
+   </apex:tabpanel>
+
+</apex:page>

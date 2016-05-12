@@ -1,0 +1,37 @@
+<apex:page >
+
+    <apex:includeLightning />
+
+ 
+
+    <div id="lightning" />
+
+ 
+
+    <script>
+    alert('1');
+    
+    $Lightning.use("c:MenuListApp", function() {});
+     alert('2');
+    
+
+/*
+        $Lightning.use("c:MenuList", function() {
+
+          $Lightning.createComponent("ui:button",
+
+          { label : "Press Me!" },
+
+          "lightning",
+
+          function(cmp) {
+    alert('2');
+          });
+
+        });
+        
+        */
+
+    </script>
+
+</apex:page>
