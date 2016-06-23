@@ -1,0 +1,50 @@
+<apex:page standardController="Account" tabStyle="Account"  recordSetVar="accounts" sidebar="false">
+<apex:pageBlock title="Account">
+<apex:pageBlockTable value="{!accounts}" var="a" id="list">
+<apex:facet name="phaad"></apex:facet>
+    <apex:column value="{!a.Name}" />
+
+        <apex:column value="{!a.billingstreet}"/>
+
+        <apex:column value="{!a.billingCity}" />
+
+        <apex:column value="{!a.billingCountry}" />
+
+        <apex:column value="{!a.billingPostalCode}"/>
+
+        <apex:column value="{!a.createdById}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+<style type="text/css">
+   .outBorder {
+    border:3px outset black;
+   }
+   .inBorder{
+    border-top:2px dotted blue;
+    border-left:2px dotted blue;
+   }
+  </style>
+  <!--<apex:form > -->
+
+<apex:pageBlock title="Data Table">
+
+<apex:dataTable title="custom Account" value="{!accounts}" var="a" id="list" styleClass="outBorder" width="100%"  cellpadding="10px">
+<apex:column styleclass="inBorder" >
+ <apex:facet name="header">Account Name </apex:facet> 
+<apex:outputText value="{!a.name}"/>
+</apex:column>
+
+        <apex:column styleclass="inBorder" > 
+         <apex:facet name="header" >Billing Address</apex:facet> 
+        
+        <apex:outputText value="{!a.createdById}"/>
+     
+        </apex:column>
+
+</apex:dataTable>
+
+</apex:pageBlock>
+
+<!-- </apex:form> -->
+</apex:page>

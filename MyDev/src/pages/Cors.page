@@ -1,0 +1,26 @@
+<apex:page showHeader="false" standardStylesheets="false">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    function call_pace(){
+       var payload = {};
+        $.post("https://sfdc-cors.herokuapp.com", payload, function(data){
+        console.log("Ajax Success ");
+         $( "#result").html(data);
+        }).fail(function(xhr, textStatus, errorThrown){
+            console.log("Ajax POST error: ", xhr, textStatus, errorThrown);
+        });
+       
+       
+      
+    }
+    
+    $( document ).ready(function() {
+        call_pace();
+    });
+</script>
+
+<div id="result" />
+
+
+</apex:page>

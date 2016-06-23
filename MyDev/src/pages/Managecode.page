@@ -1,0 +1,527 @@
+<apex:page standardController="Opportunity" contentType="application/msWord#FileName.doc">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<p><strong>STANDARD FORM FOR REQUESTING INFORMATION ON PRESSURE AND CAPACITY</strong></p>
+<table border="1" width="712" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="4" valign="top" width="312">
+<p><strong>Request for information from GT</strong></p>
+</td>
+<td colspan="7" valign="top" width="400">
+<p>GT's Request ref no:</p>
+</td>
+</tr>
+<tr>
+<td colspan="11" width="712" bgcolor="#e0e0e0">
+<p>1. <strong>Details of person / organisation requesting information </strong></p>
+<p>The Requester completes this section identifying their organisation, contact details and the person who should be sent the response from the GT or who should be contacted in the event of a query about the request.</p>
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Date of Request</p>
+</td>
+<td colspan="3" width="182">
+
+</td>
+<td colspan="2" width="125">
+<p>Requesters Reference No.</p>
+</td>
+<td colspan="5" width="275">
+
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Requester Organisation</p>
+</td>
+<td colspan="10" width="582">
+<p>BRITISH GAS BUSINESS</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top" width="130">
+<p>Requesters Address</p>
+</td>
+<td colspan="10" width="582">
+<p>FLOOR 3, 3 CALLAGHAN SQUARE, TRESILLIAN WAY, CARDIFF.</p>
+</td>
+</tr>
+<tr>
+<td colspan="10" width="582">&nbsp;</td>
+</tr>
+<tr>
+<td width="130">
+<p>Post Code</p>
+</td>
+<td colspan="3" width="182">
+<p>CF10 5BT</p>
+</td>
+<td colspan="2" width="125">
+<p>Email.</p>
+</td>
+<td colspan="5" width="275">
+<p><a href="mailto:bgbgt1@centrica.co.uk">bgbgt1@centrica.co.uk</a></p>
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Contact Name</p>
+</td>
+<td colspan="3" width="182">
+<p>THIRD PARTY LINE</p>
+</td>
+<td colspan="2" width="125">
+<p>Phone No.</p>
+</td>
+<td colspan="5" width="275">
+<p>08456 781 032</p>
+</td>
+</tr>
+<tr>
+<td colspan="11" width="712" bgcolor="#e0e0e0">
+<p><strong>2. Site Details </strong> (Where the work is intended to be carried out)</p>
+<p>The Requester completes this section providing details of the valid Site address: <br /> Post Code should be provided by the Requester where known. Where not available the requester shall provide a valid ordnance survey grid reference number. <br /> The MPRN or connections quotation reference number must be provided by the Requester, unless it is an existing service without an MPRN issued, in which case the Gas Supplier/Shipper will generate a number once they have ensured that service pipe is 'live' and that all measures have been undertaken to ensure that an MPRN does not exist and that a duplicate record is not created.</p>
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Site Name</p>
+</td>
+<td colspan="10" width="582">
+
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Contact</p>
+</td>
+<td colspan="3" width="182">
+
+</td>
+<td colspan="3" width="128">
+<p>Phone No./ Email</p>
+</td>
+<td colspan="4" width="272">
+
+</td>
+</tr>
+<tr>
+<td rowspan="3" valign="top" width="130">
+<p>Site Address</p>
+</td>
+<td colspan="10" width="582">
+
+</td>
+</tr>
+<tr>
+<td colspan="10" width="582">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td colspan="10" width="582">
+
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>Post Code</p>
+</td>
+<td colspan="3" width="182">
+
+</td>
+<td colspan="4" width="156">
+<p>O.S. Grid Ref No:</p>
+</td>
+<td colspan="3" width="244">
+
+</td>
+</tr>
+<tr>
+<td width="130">
+<p>MPRN</p>
+</td>
+<td colspan="3" width="182">
+
+</td>
+<td colspan="4" width="156">
+<p>Connections quotation reference number &sup1;</p>
+</td>
+<td colspan="3" width="244">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" width="178">
+<p>Status report from Requester</p>
+</td>
+<td colspan="2" width="134">
+<p>No Gas at ECV</p>
+<p>No ECV</p>
+</td>
+<td colspan="5" width="207">
+<p>Energy Required</p>
+</td>
+<td colspan="2" width="193">
+
+</td>
+</tr>
+<tr>
+<td colspan="11" width="712" bgcolor="#e0e0e0">
+<p><strong>3. Information Required</strong></p>
+<p>The requester completes this section identifying the information required.</p>
+</td>
+</tr>
+<tr>
+<td colspan="3" width="191">
+<p>Pressure Information Required</p>
+</td>
+<td colspan="2" width="169">
+<p>Yes No</p>
+</td>
+<td colspan="5" width="201">
+<p>Service Pipe Status Live / Dead Check Undertaken:</p>
+</td>
+<td width="151">
+<p align="center"><a name="chkServiceCheckYes"></a> Yes <a name="chkServiceCheckNo"></a> No</p>
+</td>
+</tr>
+<tr>
+<td colspan="3" width="191">
+<p>Capacity Information Required</p>
+</td>
+<td colspan="2" width="169">
+<p>Yes No</p>
+</td>
+<td colspan="5" width="201">
+<p>Live / Dead Reference Number:&sup2;</p>
+</td>
+<td width="151">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3" width="191">
+<p>Available ECV Details Required.&sup3;</p>
+</td>
+<td colspan="2" width="169">
+<p>Yes No</p>
+</td>
+<td colspan="5" width="201">
+<p>New Service</p>
+<p>Existing Service</p>
+</td>
+<td width="151">
+<p align="center">Yes No</p>
+<p align="center">Yes No</p>
+</td>
+</tr>
+<tr>
+<td width="130">&nbsp;</td>
+<td width="48">&nbsp;</td>
+<td width="13">&nbsp;</td>
+<td width="121">&nbsp;</td>
+<td width="48">&nbsp;</td>
+<td width="77">&nbsp;</td>
+<td width="4">&nbsp;</td>
+<td width="28">&nbsp;</td>
+<td width="51">&nbsp;</td>
+<td width="42">&nbsp;</td>
+<td width="151">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><em>&sup1;</em> <em> Where a new service pipe has been requested, the 'Connection Quotation Reference Number' must be provided as part of the GT1 Application. </em></p>
+<p><em> &sup2; Where a 'Live/Dead' Check has been undertaken by the client, the 'Live/Dead' reference number must be provided. </em></p>
+<p><em> &sup3; If the Applicant requires the 'ECV Details', (when available) the Applicant must indicate this in their application. The ECV details, should they be available will be confirmed in the additional information/comments box. </em></p>
+<table border="1" width="708" cellspacing="0" cellpadding="0" align="left">
+<tbody>
+<tr>
+<td colspan="6" width="393">&nbsp;</td>
+<td colspan="4" width="315">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="6" width="393" bgcolor="#e0e0e0">
+<p><strong>4.essential Network Information </strong></p>
+<p><strong> GT completes this section.</strong></p>
+</td>
+<td colspan="4" width="315" bgcolor="#e0e0e0">
+<p><strong>GT's Request ref no:</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="3" width="162">
+<p>Service pipe status</p>
+</td>
+<td colspan="3" width="231">
+<p>Live Dead</p>
+<p>Planned Quoted</p>
+</td>
+<td colspan="4" width="315">
+<p>MPRN:</p>
+</td>
+</tr>
+<tr>
+<td colspan="4" width="247">
+<p>Service pipe status planned follow up work</p>
+</td>
+<td colspan="6" width="461">
+<p align="center">Fix ECV Open Valve Relay Service Pipe</p>
+</td>
+</tr>
+<tr>
+<td colspan="4" rowspan="2" width="247">
+<p>Service Pipe Capacity</p>
+<p>Nominated Maximum</p>
+</td>
+<td colspan="4" width="195">
+<p>Service pipe energy value confirmed or available</p>
+</td>
+<td colspan="2" width="266">
+<p>SPEV<sub>nom/max*</sub>=&hellip;&hellip;&hellip;.&hellip;&hellip;&hellip;&hellip;kWh</p>
+</td>
+</tr>
+<tr>
+<td colspan="4" width="195">
+<p>Flowrate</p>
+</td>
+<td colspan="2" width="266">
+<p>Q<sub>nom/max*</sub>.=&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.&hellip;&hellip;..sm<sup>3</sup>/h</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>Pressure Tier</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>Design Minimum Pressure</p>
+<p>DMP</p>
+</td>
+<td valign="top" width="98">
+<p>Lowest Operating Pressure</p>
+<p>LOP</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>Maximum Operating Pressure</p>
+<p>MOP</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>Design</p>
+<p>Pressure</p>
+<p>DP</p>
+</td>
+<td valign="top" width="152">
+<p>Design Maximum Incidental Pressure</p>
+<p>DMIP</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>LP</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>19 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>25 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>75 mbar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>75 mbar</p>
+</td>
+<td valign="top" width="152">
+<p>200 mbar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>MP35</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>35 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>35 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>185 mbar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>2.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>2.7 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>MP65</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>65 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>75 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>250 mbar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>2.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>2.7 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>MP105</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>105 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>105 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>1.1 bar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>2.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>2.7 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>MP180</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>180 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>180 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>1.6 bar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>2.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>2.7 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>MP270</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>270 mbar</p>
+</td>
+<td valign="top" width="98">
+<p>280 mbar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>2.0 bar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>2.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>2.7 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>IP</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>&hellip;&hellip;&hellip;&hellip;.bar</p>
+</td>
+<td valign="top" width="98">
+<p>&hellip;&hellip;&hellip;&hellip;.bar</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>&hellip;&hellip;&hellip;&hellip;.bar</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>7.0 bar</p>
+</td>
+<td valign="top" width="152">
+<p>9.31 bar</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p>Other</p>
+</td>
+<td colspan="3" valign="top" width="100">
+<p>&hellip;&hellip;&hellip;&hellip;.</p>
+<p>mbar/bar*</p>
+</td>
+<td valign="top" width="98">
+<p>&hellip;&hellip;&hellip;&hellip;.</p>
+<p>mbar/bar*</p>
+</td>
+<td colspan="2" valign="top" width="91">
+<p>&hellip;&hellip;&hellip;&hellip;</p>
+<p>mbar/bar*</p>
+</td>
+<td colspan="2" valign="top" width="119">
+<p>&hellip;&hellip;&hellip;&hellip;</p>
+<p>.mbar/bar*</p>
+</td>
+<td valign="top" width="152">
+<p>&hellip;&hellip;&hellip;.</p>
+<p>mbar/bar*</p>
+</td>
+</tr>
+<tr>
+<td colspan="10" valign="top" width="708">
+<p><strong>Additional Information/Comments:</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td colspan="10" width="708" bgcolor="#e0e0e0">
+<p><strong>5. Application valid date:</strong></p>
+<p><strong>The GT shall complete this section:</strong></p>
+<p><strong> The GT1 information provided on this application form is valid for 90 days from the date stated below. The details provided on this GT1 Form in based on the information provided at the time the application was made. The GT will not be responsible for any changes made to site, during the 90day period. </strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="151">
+<p><strong>GT valid Date:</strong></p>
+</td>
+<td colspan="8" width="557">&nbsp;</td>
+</tr>
+<tr>
+<td width="147">&nbsp;</td>
+<td width="4">&nbsp;</td>
+<td width="11">&nbsp;</td>
+<td width="86">&nbsp;</td>
+<td width="98">&nbsp;</td>
+<td width="48">&nbsp;</td>
+<td width="44">&nbsp;</td>
+<td width="5">&nbsp;</td>
+<td width="114">&nbsp;</td>
+<td width="152">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+<p>Note: The information provided is solely for the provision of pressure tier information at the location</p>
+<p>requested. The provision of capacity information is for indicative purposes only and does not confirm</p>
+<p>the availability of gas nor does it reserve any capacity.</p>
+<p>If the proposed metering pressure is above the DMP of the Network then a separate application for an</p>
+<p>Ancillary Pressure Agreement will need to be submitted or if the requester has knowledge of a plan to</p>
+<p>install a booster or compressor they must advise the relevant GT.</p>
+<p>&nbsp;</p>
+<p><strong>Note: Ancillary Pressure Agreements or installing a booster/compressor is not part of the GT1 process. </strong></p>
+
+</apex:page>

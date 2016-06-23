@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning />
+    <apex:includeScript value="/lightning/lightning.out.js" />
+
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:testnew", function() {
+          $Lightning.createComponent("ui:button",
+          { label : "Press Me!" },
+          "lightning",
+          function(cmp) {
+            alert('11111');
+          });
+        });
+    </script>
+</apex:page>
