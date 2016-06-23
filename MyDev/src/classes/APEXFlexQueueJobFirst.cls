@@ -6,6 +6,8 @@ return Database.getQueryLocator('Select Id,Name from Account Where Name !=null L
 global void execute(Database.BatchableContext BC, List<Account> scope){
 // for(Account a : scope){
 System.debug('---------------------->>>>>+This Apex Flex Queue Jobs....!'); 
+
+
 // } 
 //List<Account> acc=[select id,Name from Account where ID != null LIMIT 2000];
 // List<Account> la=new List<Account>();
